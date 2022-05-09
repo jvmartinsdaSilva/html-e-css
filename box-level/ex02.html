@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Groupin-tags</title>
+    <style>
+        body{
+            font-family: Arial, Helvetica, sans-serif;
+            background-color: dimgray;
+            margin: 0px;
+        }
+        nav{
+            background-color: rgb(85, 85, 85);
+            padding: 3px;
+            box-shadow: 2px 3px 3px 1px rgba(0, 0, 0, 0.24);
+        }
+        nav > a{
+            text-decoration: none;
+            color: white;
+            font-weight: bolder;
+            margin-right: 50px;
+            margin-left: 50px;
+        }
+
+        nav > a:hover{
+            text-decoration: underline;
+            color: red;
+            
+        }
+
+        header{
+            background-color: white;
+            padding: 10px;
+            margin: 10px;
+        }
+        article{
+            background-color: rgb(221, 221, 221);
+            padding: 5px;
+        }
+        article > aside > p{
+            background-color: rgb(146, 146, 146);
+        }
+        main{
+            background-color: white;
+            padding: 10px;
+            margin: 10px;
+            border-radius: 10px 0px;
+            box-shadow: 2px 3px 5px 0px rgba(0, 0, 0, 0.116);
+        }
+        footer{
+            background-color: black;
+            color: white;
+            text-align: center;
+            padding: 5px;
+            
+        }
+
+        footer > p{
+            margin: 0px;
+        }
+
+        div#bola{
+            margin: auto;
+            margin-top: 10px;
+            width: 100px;
+            height: 100px;
+            background: linear-gradient(to left, red, black);
+            border-radius: 50%;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Meu site</h1>
+        <nav>
+            <a href="#">Link</a>
+            <a href="#">Link</a>
+            <a href="#">Link</a>
+            <a href="#">Link</a>
+            <a href="#">Link</a>
+        </nav>
+    </header>
+    <main>
+        <section id="assuntos">
+            <p>Esportes, politica e Tecnologia</p>
+        </section>
+        <section id="noticiais">
+            <article>
+                <h2>Noticias sobre o Brasil</h2>
+                <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Quod similique at ex repudiandae eaque commodi nobis, fugiat soluta corrupti odio iste quasi magnam recusandae temporibus cumque ullam ea voluptate mollitia?Lorem ipsum dolor sit amet consectetur adipisicing elit. Aspernatur reprehenderit eveniet et eligendi praesentium ab qui nobis optio. Quae sed blanditiis fuga veniam porro illum fugit, illo molestiae quo rem?</p>
+                <aside>
+                    <p>Artigo escrito por José da Silva</p>
+                </aside>
+            </article>
+        </section>
+    </main>
+    <footer>
+        <p>Desenvolvido pelo curso em video</p>
+    </footer>
+    <div id="bola"></div>
+</body>
+</html>

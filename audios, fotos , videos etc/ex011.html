@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Midias em HTML</title>
+</head>
+<body>
+    <h1>Imagens dinâmicas</h1>
+    <p>Aqui carregaremos varios tipos de imagens, pequena, média e grande</p>
+    <p>Tente abrir este site em varios dispositivos ou simplesmente aumente o tamanho do navegador</p>
+    <p>As imagens irão se adaptar de acordo com o tamanho da tela do navegador</p>
+    <p>Lembre se a ordem das imagens importa, sendo que a ultima sempre sera a padrão</p>
+    <p>Dica:Tente sempre colocar a largura maxima um pouco maior que a da foto, isso dara uma maior fluidez</p>
+
+    <picture>
+        <source media="(max-width:750px)" srcset="imgs/foto-p.png" type="image/png">
+        <source media="(max-width: 1000px)" srcset="imgs/foto-m.png" type="image/png">
+        <img src="imgs/foto-g.png" alt="Imagem grande">
+    </picture>
+
+    <h1>Reproduzindo audios </h1>
+    <p>Reproduzindo audios em HTM5</p>
+    <audio preload="metadata" controls loop>
+    <source src="audios/guanacast-33.mp3" type="audio/mpeg">
+     <source src="audios/guanacast-33.ogg" type="audio/ogg">
+     <source src="audios/guanacast-33.wav" type="audio/wav">
+     <p>Infelizmente seu navegador não é compativel com nossos audios, <a href="audios/guanacast-33.mp3">
+         Click aqui para baixar o arquivo mp3>
+     </a></p>
+    </audio>
+    
+</body>
+</html>
