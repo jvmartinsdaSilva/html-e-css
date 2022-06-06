@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body{
+            background-color: rgb(24, 24, 24);
+            color: whitesmoke;
+            font-family: sans-serif;
+        }
+        .clock{
+            animation: cor 7s ease  infinite;
+            margin: auto;
+            margin-top: 50px;
+            width: 70px;
+            height: 70px;
+            border: 2px solid wheat;
+            border-radius: 50%;
+            background:linear-gradient(-45deg, blue, red);
+            background-size: 200% 200%;
+        }
+
+        .clock:hover{
+            transform: scale(3) translateY(20px);
+            border-radius: 36px;
+        }
+
+        .ponteiro{
+            animation: gira 5s cubic-bezier(.55,.57,1,.99)  infinite;
+            margin: auto;
+            width: 2px;
+            height: 35px;
+            background-color: wheat;
+            transform-origin: bottom;
+        }
+
+        @keyframes gira{
+            to{
+                transform: rotate(360deg);           
+            }
+            
+        }
+
+        @keyframes cor{
+            0%{
+                background-position: 0%, 50%;
+            }
+
+            50%{
+                background-position: 100%, 50%;
+            }
+
+            100%{
+                background-position: 0%, 50%;
+            }
+        }
+    </style>
+</head>
+<body>
+   <div class="clock">
+       <div class='ponteiro'></div>
+</body>
+</html>

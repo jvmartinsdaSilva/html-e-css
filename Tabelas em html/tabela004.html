@@ -31,13 +31,13 @@
     <table>
         <caption>Filmes Favoritos </caption>
         <thead>
-            <th>Grupo</th>
-            <th>Nomes</th>
-            <th colspan="3">Filmes</th>
+            <th scope="col">Grupo</th>
+            <th scope="col">Nomes</th>
+            <th colspan="3" scope="colgroup">Filmes</th>
         </thead>
         <tbody>
             <tr>
-                <th rowspan="3">Mulheres</th>
+                <th rowspan="3" scope="rowgroup">Mulheres</th>
                 <td>Ana Maria Santos</td>
                 <td>Alien</td>
                 <td>Rambo</td>
@@ -56,7 +56,7 @@
                 <td>Big Hero</td>
             </tr>
             <tr>
-                <th rowspan="3">Homens</th>
+                <th rowspan="3" scope="rowgroup">Homens</th>
                 <td>Bruno Mendonça</td>
                 <td>Intocáveis</td>
                 <td>Amnésia</td>
@@ -73,6 +73,10 @@
                 <td>Star Wars 5</td>
                 <td>Taxi Driver</td>
                 <td>Toy Story</td>
+            </tr>
+            <tr>
+                <th scope="row" colspan="4">Total</th>
+                <td>000000</td>
             </tr>
 
         </tbody>
