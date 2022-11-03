@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .myform{
+            margin: 50px auto;
+            display: block;
+            width: 450px;
+            height: calc(auto + 10px);
+            padding: 15px;
+            border: 1px solid black;
+            border-radius: 5px;
+            font-family: Arial, Helvetica, sans-serif;
+        }
+        .btn{
+            margin-left: 190px;
+            display: block;
+        }
+    </style>
+</head>
+<body>
+    <!-- 
+    GET (Para dados mais simples, dados não sensives(nome, idade, peso , pesquisas do google,URLS COMPARTILHAVEIS, etc..), obs: Dados em get não podem ultrapassar 3000 bytes(+- 3000 letras))
+    POST (Para dados mais complexos, dados sensives (senhas, email,arquivos, etc..))
+-->
+    <div class="myform">
+        <h1>Meu primeiro formulario</h1>
+        <form action="cadastro.php" autocomplete="off" method="post">
+            <p>
+                <label for="iNome">Nome:</label>
+                <input type="text" name="nome" id="iNome" placeholder="Digite seu nome" required>
+            </p>
+            <p>
+                <label for="iSobrenome">Sobrenome: </label>
+                <input type="text" name="sobrenome" id="iSobrenome" placeholder="Digite seu sobrenome!" required>
+            </p>
+            <p>
+                <input class="btn" type="submit" value="Enviar">
+            </p>
+        </form>
+
+    </div>
+</body>
+</html>
