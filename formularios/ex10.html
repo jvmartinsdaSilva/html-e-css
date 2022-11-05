@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Testando formulários</h1>
+
+    <form action="cadastro.php" method="get">
+
+        <p>
+            <label for="iAno">Em que ano você nasceu?</label>
+            <input type="number" name="Ano" id="iAno" min="1900" max="2020"
+            oninput="calcIdade()">
+        </p>
+
+        <p>
+            <label for="iIdade">Sua idade é </label>
+            <output id="iIdade">0</output>
+        </p>
+
+        <p>
+            <input type="submit" value="Enviar">
+            <input type="reset" value="Limpar"  id="Clean">
+        </p>
+    </form>
+
+    <script>
+        const cleanBtn = document.getElementById('Clean')
+
+        cleanBtn.addEventListener('click', () => {
+            document.getElementById('iIdade').innerText = '0'
+        })
+
+        const calcIdade = () => {
+            const res = document.getElementById('iIdade')
+            const ano = document.getElementById('iAno')
+            const anoNow = new Date().getFullYear()
+
+            res.innerHTML = anoNow - Number(ano.value)
+        }
+
+
+    </script>
+</body>
+</html>

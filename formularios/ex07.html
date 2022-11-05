@@ -9,12 +9,47 @@
 <body>
     <h1>Testando formulários</h1>
     
-    <form action="cadastro.php" method="">
-
-        
+    <form action="cadastro.php" method="POST">
 
         <p>
+            <label for="iEst">Estado</label>
+            <select name="estado" id="iEst">
+
+                <option value="" selected>--- Escolha ---</option>
+                <optgroup label="Região Sudeste">
+                    <option value="MG">Minas Gerais</option>
+                    <option value="RJ">Rio de Janeiro</option>
+                    <option value="SP">São Paulo</option>
+                </optgroup>
+
+                <optgroup label="Região Nordeste">
+                    <option value="MA">Maranhão</option>
+                    <option value="RN">Rio Grande do Norte</option>
+                    <option value="PE">Pernambuco</option>
+                </optgroup>
+            </select>
+        </p>
+
+        <p>
+            <label for="iProf">Profissão</label>
+            <input type="text" name="prof" id="iProf" list="LstProf">
+            <datalist id="LstProf">
+                <option>Administrador</option>
+                <option>Contabilista</option>
+                <option>Desenvolvedor</option>
+                <option>Professor</option>
+            </datalist>
+        </p>
+
+        <p>
+            <label for="iMsg">Mensagem</label><br>
+            <textarea name="msg" id="" cols="30" rows="10"></textarea>
+            <!-- Recomendado usar o METHOD POST arquivos com mais de 3k bytes -->
+        </p>
+    
+        <p>
             <input type="submit" value="Enviar">
+            <input type="reset" value="Limpar">
         </p>
     </form>
 </body>
