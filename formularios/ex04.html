@@ -8,10 +8,26 @@
 </head>
 <body>
     <h1>Teste de Formúlario</h1>
-    <form action="cadastro.php" method="get">
+    <form action="cadastro.php" method="get" autocomplete="on">
+        <fieldset>
+            <legend>Dados pessoais</legend>
+            <p>
+                <label for="iNome">Nome: </label>
+                <input type="text" name="nome" id="iNome" minlength="5" maxlength="20" required>
+            </p>
+            <p>
+                <label for="iEmail">Email: </label>
+                <input type="email" name="email" id="iEmail" autocomplete="email" required>
+            </p>
+            <p>
+                <label for="iTelefone">Telefone: </label>
+                <input type="tel" name="telefone" id="iTelefone" autocomplete="tel-national" pattern="^\(\d{2}\)\d{4,5}-\d{4}$" placeholder="(xx)xxxx-xxxx" required>
+                <!-- Pesquise sobre RegEx -->
+            </p>
+        </fieldset>
         <p>
-            <label for="iEmail">Email: </label>
-            <input type="email" name="email" id="iEmail">
+            <input type="submit" value="Enviar">
+            <input type="reset" value="Limpar">
         </p>
     </form>
 </body>
