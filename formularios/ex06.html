@@ -9,8 +9,28 @@
 <body>
     <h1>Testando formulários</h1>
 
-    <form action="cadastro.php" method="get">
+    <form action="cadastro.php" method="post">
+
+        <p>
+            <label for="iCor">Cor: </label>
+            <input type="color" name="cor" id="iCor" value="#ffffff">
+        </p>
+
+        <p>
+            <label for="iNivel">Nível de sastifação</label>
+            <input type="range" name="nivel" id="iNivel" min="1" max="5" value="1">
+        </p>
+
+        <p>
+            <label for="iFoto">Foto de perfil</label>
+            <input type="file" name="foto" id="iFoto">
+            <!-- Lembre-se de usar o method  POST para envios de ARQUIVOS,FOTOS,ect -->
+        </p>
         
+        <p>
+            <input type="submit" value="Enviar">
+            <input type="reset" value="Limpar">
+        </p>
     </form>
 </body>
 </html>
